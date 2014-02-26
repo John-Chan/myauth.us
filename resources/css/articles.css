@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/* This stylesheet contains text decorations used in support articles */
+
+#article-content { color: #4A4A4A; background-color: #EBEBEB; font-size: 14px; line-height: 20px; }
+#article-content p { margin-top: 0; margin-bottom: 25px; }
+#article-content b,
+#article-content strong,
+#article-content em { color: #000000; font-weight: bold; }
+#article-content a strong,
+#article-content a em { color: #0072A3; }
+#article-content a:hover strong,
+#article-content a:hover em { color: #014663; }
+
+#article-content h1 { font-size: 24px; font-weight: bold; color: #000000; padding-bottom: 3px; margin-bottom: 11px; font-variant: small-caps; border-bottom: 1px solid #AAAAAA; }
+#article-content h2 { font-size: 22px; font-weight: normal; color: #000000; padding-bottom: 3px; margin-bottom: 11px; }
+#article-content h3 { font-size: 20px; font-weight: normal; color: #000000; padding-bottom: 3px; margin-bottom: 11px; }
+#article-content h4 { font-size: 16px; line-height: 30px; font-weight: bold; color: #000000; padding-bottom: 3px; }
+#article-content h5 { font-size: 15px; line-height:20px; letter-spacing: -0.05em; font-weight: bold; color: #000000; padding-bottom: 3px; }
+#article-content h6 { font-size: 14px; line-height:20px; font-weight: bold; font-style: normal; font-variant: normal; padding-bottom: 3px; }
+#article-content a h2,
+#article-content a h3,
+#article-content a h4,
+#article-content a h5,
+#article-content a h6 { color: #0072A3; }
+#article-content a:hover h2,
+#article-content a:hover h3,
+#article-content a:hover h4,
+#article-content a:hover h5,
+#article-content a:hover h6 { color: #014663; }
+#article-content .back-link { font-size: 11px; font-weight: bold; }
+#article-content .centered { text-align: center; }
+#article-content .bold { font-weight: bold; }
+#article-content .underline { font-style: italic; }
+#article-content .highlight { color: #00B6FF; }
+#article-content .highlight-red { color: #FF0000; }
+#article-content .highlight-green { color: #00FF00; }
+#article-content .highlight-blue { color: #0000FF; }
+#article-content ul { font-size: 14px; list-style-image: url("/resources/img/article-arrow.png"); margin-left: 18px; margin-bottom: 25px; }
+#article-content ul li { line-height: 20px; margin-bottom: 10px; }
+#article-content ol { list-style: decimal; margin-left: 25px; margin-bottom: 25px; }
+#article-content ol li { line-height: 20px; margin-bottom: 5px; }
+#article-content ol li ul {margin-bottom: 5px; margin-top: 5px; }
+#article-content img { -webkit-border-bottom-right-radius:3px;-moz-border-radius:3px;border-radius:3px; }
+#article-content .no-border { border: none; }
+#article-content .alignleft { text-align: left; }
+
+.article-has-authenticator-has-active { padding-left: 13px; background: url("/resources/img/on-off.png") no-repeat 0 0;}
+.article-has-authenticator-none-active { padding-left: 18px; background: url("/resources/img/on-off.png") no-repeat 0 -64px; line-height: 16px; }
+.article-none-authenticator { padding-left: 18px; background: url("/resources/img/on-off.png") no-repeat 0 -32px; line-height: 16px; }

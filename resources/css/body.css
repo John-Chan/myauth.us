@@ -1,0 +1,79 @@
+/* 
+    Document   : body
+    Created on : 2013-6-11, 20:31:14
+    Author     : Ann
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*以下为主页部分CSS*/
+#page-content{
+    height: auto;
+}
+#layout-middle {
+    background: #DDDCDA  url("/resources/img/bgbody.jpg") top center repeat-x;
+    border-bottom: 4px solid #777674;
+    width: 100%;
+    min-height: 359px;
+}
+
+#content {
+    padding: 32px 0px;
+    position: relative;
+}
+.article-column {
+    color: #4A4A4A;
+    float: left;
+    width: 100%;
+}
+#article-container {
+    margin-top: 40px;
+}
+#breadcrumb {
+    color: rgb(141, 141, 141);
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+}
+.ui-breadcrumb { position: relative; top: -3px;  }
+.ui-breadcrumb a { color: #5f5f5f; font-weight: bold; font-size: 12px; line-height: 20px; font-style: normal;text-decoration:none; }
+.ui-breadcrumb a:hover, 
+.ui-breadcrumb a:active { color: #000000; }
+.ui-breadcrumb li { 
+    display:inline;margin-right: 5px; padding-right: 12px; background: url("/resources/img/breadcrumb.png") no-repeat 100%; max-width: 850px; max-height: 40px; overflow: hidden; }
+.ui-breadcrumb li.last {position: relative; background: none;}
+.ui-breadcrumb li.last a{ color: #000000; font-weight: bold;}
+.ui-breadcrumb li.last a:hover, 
+.ui-breadcrumb li.last a:active { color: #000000; font-weight: bold; }
+.ui-breadcrumb li a { border-bottom: none; }
+.page-content p { margin: 0 0 15px 0; line-height: 1.5; }
+.page-content form { margin-top: 15px; }
+
+#article {
+    position: relative;
+    background-color: rgb(235, 235, 235);
+    padding: 28px 30px 30px;
+}
+.article-games {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.article-ci
+{   
+    margin-bottom: 20px;
+    width: 66.66%;
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+#article-title {
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgb(170, 170, 170);
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    letter-spacing: -0.05em;
+}
+a { color:#0072a3 }
+a:hover,
+a:focus { color: #014663; }

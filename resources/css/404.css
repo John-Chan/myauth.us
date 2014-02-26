@@ -1,0 +1,19 @@
+body {
+    text-transform: none !important;
+      letter-spacing: 0 !important;
+      font-family: 微软雅黑, Microsoft YaHei, Helvetica, Tahoma, StSun, 宋体, SimSun, sans-serif !important;
+      font-style: normal !important;
+      font-size: 12px;
+      background: #000 url(/resources/img/error-murloc.jpg) 50% 0 no-repeat;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+}
+div.errorPage {
+    text-align: center;
+    position: absolute;
+    top: 340px;
+    width: 100%;
+    color: #D21F16;
+    font-size: 22px;
+}

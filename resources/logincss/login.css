@@ -1,0 +1,214 @@
+/* 
+    Document   : login
+    Created on : 2013-6-11, 22:20:10
+    Author     : Ann
+    Description:
+        Purpose of the stylesheet follows.
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, em, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    outline: 0px none;
+}
+body{
+        background:#040404 url(/resources/img/bnbg.jpg) 50% 0 no-repeat;
+        color: #4a4a4a;
+        font-family: 微软雅黑, Microsoft YaHei, Helvetica, Tahoma, StSun, 宋体, SimSun, sans-serif;
+        font-size: 12px;    
+	}
+a { color:#0072a3; text-decoration: none; }
+a:hover,
+a:focus { color: #00c0ff; }
+img { border: 0; }
+
+h2 { font-size: 28px; color: #8c99a5; margin: 0 0 15px 0; padding: 0; letter-spacing: -1px; }
+h3 { font-size: 18px; margin: 0 0 15px 0; padding: 0; font-weight: normal; letter-spacing: -1px; }
+#wrapper {
+    width: 1000px;
+    margin: 0px auto;
+    padding: 15px 0px;
+}
+#logo {
+    height: 92px;
+    width:100%;
+    text-align:center;
+}
+
+#content {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    min-height: 450px;
+}
+#contentloged{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    min-height: 160px;
+}
+#ShowDiv{
+    position: relative;
+    text-align: center;
+    top:    -65px;
+}
+.login #left{
+    width: 370px;
+    padding: 0px 60px;
+}
+#left, #right {
+    float: left;
+}
+.login #right { width: 370px; padding: 0 60px; }
+.login #right ul { padding:0 20px }
+.label {
+    color: rgb(104, 114, 123);
+    display: block;
+    padding-bottom: 2px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+#form p { margin: 0 0 20px 0; }
+#form .input { width: 95%; }
+#remember-me { float: right; display: block; vertical-align: middle; }
+#remember-me:hover { color: #8c99a5; }
+.input { background: #fff url("/resources/input_bg.gif") repeat-x; 
+color: rgb(0, 0, 0);
+padding: 7px;
+font-size: 14px;
+border: 1px solid rgb(192, 192, 192);
+border-radius: 5px 5px 5px 5px;
+font-family: 微软雅黑,Microsoft YaHei,Helvetica,Tahoma,StSun,宋体,SimSun,sans-serif;}
+.input:hover { background: #fff; }
+.input:focus { background: #fff; border-color: #175e7c; color: #000; }
+.input.disabled, .input[disabled="disabled"] { background: #e3e3e3; color: #b6b6b6; border-color: #c0c0c0; }
+.label { color: #68727b; display: block; padding-bottom: 2px; font-size: 11px; text-transform: uppercase; }
+
+.ui-button span,
+.ui-cancel span { font: normal 12px/38px "Lucida Sans Unicode","Lucida Grande",sans-serif;text-transform: uppercase; }
+.ui-button span { padding: 0 0 0 28px; }
+.ui-button span span { background-position: 100% -123px; padding: 0 28px 0 0; }.ui-button,
+.ui-cancel { background: none; border: 0; cursor: pointer; display: inline-block; height: auto; overflow: visible; padding: 0; margin: 0; vertical-align: middle; outline: none; text-align: center; white-space: nowrap; cursor: pointer; }
+.ie .ui-button,
+.ie .ui-cancel { width: auto; }
+.ui-button span,
+.ui-cancel span { outline: none; display: inline-block; background-repeat: no-repeat }
+.ui-button .button-left,
+.ui-button .button-right { overflow:hidden }
+.ie7 .ui-button .button-left,
+.ie7 .ui-button .button-right { overflow:visible }
+.ui-button.disabled,
+.ui-button.disabled:hover,
+.ui-button.disabled.hover { cursor: default; }
+.ui-button.processing,
+.ui-button.processing:hover,
+.ui-button.processing.hover { cursor: progress; }
+.ui-button-large span p strong,
+.total-due strong,
+.recharge-success h3,
+#page-content .summary,
+.queue-details strong { font-size: 18px }
+.ui-button.disabled span span,
+.ui-button.disabled:hover span span,
+.ui-button.disabled.hover span span,
+.button1[disabled] { cursor: not-allowed; }
+.button1.processing,
+.button1.processing:hover,
+.button1.processing.hover { cursor: progress; }
+.ui-cancel span { font: normal 12px/38px "Lucida Sans Unicode","Lucida Grande",sans-serif;text-transform: uppercase; }
+.ui-cancel span { border-left: 1px solid #bbb; padding: 0 1em; margin-left: 10px; }.ui-cancel { background: none; border: 0; cursor: pointer; display: inline-block; height: auto; overflow: visible; padding: 0; margin: 0; vertical-align: middle; outline: none; text-align: center; white-space: nowrap; cursor: pointer; }
+.ie .ui-button,
+.ie .ui-cancel { width: auto; }
+.ui-cancel span { outline: none; display: inline-block; background-repeat: no-repeat }
+.input-note-content .ui-cancel span { border-color: #999; }
+.button1 {
+padding: 2px 4px;
+}
+.button-right{
+    font-family: 微软雅黑, Microsoft YaHei, Helvetica, Tahoma, StSun, 宋体, SimSun, sans-serif;
+}
+.button1 { padding: 2px 4px; }
+.button1 span { color: #fff; height: 32px; line-height: 32px; background: url("/resources/img/default.gif") 50% 0 repeat-x; }
+.button1 > span { -moz-box-shadow: #444 0 0 5px; -webkit-box-shadow: #444 0 0 5px; box-shadow: #444 0 0 5px; }
+.button1 span { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+.button1.disabled span,
+.button1.processing span,
+.button1[disabled] span { -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+.button1.hover span,
+.button1:hover span,
+.button1:focus span { background-position: 50% -32px; }
+.button1.disabled span,
+.button1.disabled:hover span,
+.button1.disabled.hover span { cursor: default; background: #bdbcb9; }
+.button1.processing span,
+.button1.processing:hover span,
+.button1.processing.hover span { cursor: default; background-position: 50% -64px; color: transparent; }
+.ui-cancel span { border-left: 1px solid #bbb; padding: 0 1em; margin-left: 10px; }
+.button1.disabled,
+.button1.disabled span,
+.button1.disabled:hover,
+.button1.disabled:hover span,
+.button1.disabled.hover,
+.button1.disabled.hover span,
+
+.ui-button, .ui-cancel {
+background: none;
+border: 0;
+cursor: pointer;
+display: inline-block;
+height: auto;
+overflow: visible;
+padding: 0;
+margin: 0;
+vertical-align: middle;
+outline: none;
+text-align: center;
+white-space: nowrap;
+cursor: pointer;
+}
+
+
+#help-links { list-style: none; margin: 0; padding: 0; }
+#help-links li { padding: 2px 0 0 20px; margin-bottom: 7px; background: url("/resources/img/lgicons.gif") 0 0 no-repeat; }
+#help-links li.icon-pass { background-position: 2px 3px; }
+#help-links li.icon-signup { background-position: 0 -37px; }
+#help-links li.icon-secure { background-position: 0 -77px; }
+#help-links li.icon-sync { background-position: 2px 3px; }
+#help-links li.icon-close { background-position: 0 -77px; }
+#help-links li.icon-down { background-position: 0 -117px}
+#help-links li.icon-sc2buy { background-position: 0 -167px}
+
+#authenticator-help-links { list-style: none; margin: 0; padding: 0; font-weight:strong; }
+#authenticator-help-links li { padding: 2px 0 0 20px; margin-bottom: 7px; margin-top: 10px; background: url("/resources/img/lgicons.gif") 0 0 no-repeat; font-weight: bold;}
+#authenticator-help-links li.icon-pass { background-position: 2px 3px; }
+
+#layout-bottom { 
+min-height: 1px;
+-moz-user-select: none;
+-webkit-user-select: none;
+user-select: none;}
+#captcha-reloader{
+float: left;
+position: relative;
+left: 20px;
+top: 40px;
+}
+.imgandreloader{
+    height: 80px;
+}
+#captcha-image{
+    float: left;
+height: auto;
+}
+.border-5 { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.inline-message {
+    color: rgb(255, 0, 0) !important;
+    font-size: 13px;
+}
+.input-error{
+    border-color: rgb(255, 2, 2);
+}
+
+
+.qqloginpic{
+    margin-top: 120px;-webkit-border-bottom-right-radius:5px;-moz-border-radius:5px;border-radius:5px;
+    width: 225px;
+}

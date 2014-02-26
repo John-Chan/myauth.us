@@ -1,0 +1,100 @@
+/* 
+    Document   : header
+    Created on : 2013-6-11, 20:31:06
+    Author     : Ann
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/*以下为全局CSS*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, em, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+}
+a{ text-decoration:none;}
+ol, ul {
+    list-style: none outside none;
+}
+body{
+        background:#040404 url(/resources/img/bnbg.jpg) 50% 0 no-repeat;
+        color: #4a4a4a;
+        font-family: 微软雅黑, Microsoft YaHei, Helvetica, Tahoma, StSun, 宋体, SimSun, sans-serif;
+        font-size: 12px;    
+        margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    outline: 0px none;
+	}
+
+/*以下为TOP部分CSS*/
+#layout-top{ background: url("/resources/img/bgtop.png") repeat-x scroll center bottom transparent; position: relative; }
+#topwrapper{
+        width: 990px;
+	margin: 0 auto;
+	padding: 0;
+	border: 0;
+	text-align: left;position: relative;
+	background: transparent top left repeat-y;
+        }
+
+#header { padding-top: 0px; clear: both; }
+#logo { height: 92px; width:402px; position: relative; z-index: 75; margin-bottom: 10px; }
+#logo a,
+#logo span { width: 402px; height: 92px; display: block; border: none; text-indent: -9999px; background: url("/resources/img/bn-logo.png") no-repeat;  }
+
+
+.top-nav {
+position: relative;
+z-index: 75;
+font-size: 11px;
+font-family:  微软雅黑, Microsoft YaHei, Helvetica, Tahoma, StSun, 宋体, SimSun, sans-serif;
+display: inline-block;
+text-align: right;
+float: right;
+}
+.top-core { font-size: 12px;
+    font-family: 微软雅黑, Microsoft YaHei, Helvetica, Tahoma, StSun, 宋体, SimSun, sans-serif; position: relative;background: url("/resources/img/background.png") repeat-x 0 -200px; color: #8694A1; display: block; float: left; line-height: 32px; padding: 0 0 7px 0; }
+.top-core a { color: #00B6FF; text-decoration: none; }
+.top-core a:hover,
+.top-core a:focus { color: #FFF; }
+
+.top-home { background-position: 0 0; background-repeat: no-repeat; }
+.top-home a { display: block; line-height: 33px; border-left: 0; text-indent: -9999px; width: 48px; padding: 0 0 0 7px; background: url("/resources/img/background.png") no-repeat 0 -40px; }
+.top-home.service-maintenance a { background-position: 0 -120px; }
+.top-home.service-alert a { background-position: 0 -160px; }
+.top-home a:hover,
+.top-home a:focus { background-color: transparent; background-position: 0 -80px; }
+
+.top-all { padding: 0 15px 7px 15px;}
+.top-data{ line-height: 33px; padding: 0 1.5em; border-left: 1px solid #33373B;}
+.top-final{ line-height: 33px; padding: 0 1.5em; border-left: 1px solid #33373B;
+           -moz-border-radius-topleft:3px;
+           -moz-border-radius-bottomright:3px;
+           -webkit-border-bottom-right-radius:3px;
+           -webkit-border-top-right-radius:3px;
+           border-top-right-radius:3px;
+           border-bottom-right-radius:3px;
+           
+           border-radius: 0px 3px 3px 0px;}
+
+#header #navigation {
+    margin-top: 0px;
+    padding: 15px 20px 0px 0px;
+    height: 61px;
+    -moz-user-select: none;
+}
+#navigation #page-menu h2 {
+    float: left;
+    margin: 0px 20px 0px 0px;
+    padding-right: 20px;
+    border-right: 1px solid rgb(73, 83, 84);
+    font-size: 36px;
+}#header #navigation h2 {
+    margin-bottom: 10px;
+    color: rgb(137, 149, 154);
+    font-weight: normal;
+}
+#navigation #page-menu h2.isolated {
+    border: 0px none;
+}

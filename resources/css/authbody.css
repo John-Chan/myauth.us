@@ -1,0 +1,379 @@
+/* 
+    Document   : authbody
+    Created on : 2013-6-15, 19:54:25
+    Author     : Ann
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.manage-security {
+    overflow: hidden;
+    margin: 3em 0px;
+    float: left;
+}
+#contentloged {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    min-height: 160px;
+}
+#ShowDiv {
+    position: relative;
+    text-align: center;
+    top: -65px;
+}
+h2 {
+    font-size: 28px;
+    color: rgb(140, 153, 165);
+    margin: 0px 0px 15px;
+    padding: 0px;
+    letter-spacing: -1px;
+}
+.dashboard {
+    overflow: hidden;
+    padding: 20px;
+    width: 600px;
+    background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.4);
+    float: left;
+}
+.supporting {
+    color: rgb(57, 57, 57);
+    font: bold 22px/1.25 微软雅黑, Microsoft YaHei, Helvetica, Tahoma, StSun, 宋体, SimSun, sans-serif;;
+}
+.auth-info-box {
+    float: left;
+    position: relative;
+    top: -30px;
+    left: 15px;
+}
+.dashboard .section {
+    width: 190px;
+    float: left;
+    margin: 40px 0px 0px;
+}
+.dashboard .section.details dl {
+    font-size: 11px;
+    line-height: 2;
+}.dashboard .security-image {
+    margin: 0px 0px 0px -20px;
+    display: block;
+    width: 200px;
+    height: 230px;
+    overflow: hidden;
+    float: left;
+}
+.dashboard .section.actions {
+    float: none;
+    margin-right: 0px;
+    float: right;
+    width: 150px;
+    margin-left:80px;
+}.dashboard .section.actions ul {
+font-size: 11px;
+}.dashboard .section.actions li {
+margin: 0 0 0 0;
+list-style: none;
+line-height: 1.5;
+}.icon-cards, .icon-note, .icon-add, .icon-buy, .icon-edit, .icon-change, .icon-lock, .icon-delete, .icon-beta, .icon-merge, .icon-download, .icon-starter, .icon-confirm, .icon-help, .icon-warning, .icon-cart, .icon-search, .icon-none
+{
+background-position: 0 -280px;
+background: url("/resources/img/account-icons.gif") 0 0 no-repeat;
+}.dashboard .section.actions ul {
+font-size: 11px;
+}
+.icon-cards { background-position: 0 0; }
+.icon-note { background-position: 0 0; }
+.icon-add { background-position: 0 -359px; }
+.icon-buy { background-position: 0 -80px; }
+.icon-edit { background-position: 0 0; }
+.icon-change { background-position: 0 0; }
+.icon-lock { background-position: 0 -203px; }
+.icon-delete { background-position: 0 -280px; }
+.icon-beta { background-position: 0 0; }
+.icon-merge { background-position: 0 -120px; }
+.icon-download { background-position: 0 -160px; }
+.icon-starter { background-position: 0 -640px; }
+.icon-confirm { background-position: 0 -396px; }
+.icon-help { background-position: 0 -435px; }
+.icon-warning { background-position: 0 -476px; }
+.icon-cart { background-position: 0 -521px; }
+.icon-search { background-position: 0 -565px; }
+.icon-none { background-position: 0 565px; }
+.subcategory {
+    font: 12px/14px 微软雅黑,Microsoft YaHei,Helvetica,Tahoma,StSun,宋体,SimSun,sans-serif;
+    color: rgb(93, 93, 93);
+text-transform: uppercase;
+}
+.dashboard .section.details dl dd {
+    margin: 0px 0px 1.25em;
+    color: rgb(39, 39, 39);
+}.dashboard .section.details dl dd strong.active {
+    color: rgb(44, 98, 0);
+}
+.dashboard .section.actions li a {
+display: inline-block;
+padding: 0 0 0 22px;
+line-height: 16px;
+height: 16px;
+}
+
+/*显示密码部分CSS*/
+.authenticator{
+position: relative;
+top: 70px;
+left: 175px;
+height:107px;
+width: 304px;
+background: url("/resources/img/anthbg.png") 0 0 no-repeat;
+}
+#authcode{
+-moz-box-orient: vertical;
+display: inline-block;
+vertical-align: middle;
+position: absolute;
+top: 16px;
+left: 24px;
+width: 193px;
+font-weight: bold;
+text-align: center;
+color: rgb(255, 255, 255);
+font-size: 2.5em;
+letter-spacing:15px;
+}
+.processbardiv{
+    position: absolute;
+    top: 80px;
+    left: 16px;
+    width: 270px;
+}
+.authprogress {
+    height: 6px;
+    -moz-box-orient: vertical;
+    border-radius: 2px 2px 2px 2px;
+    display: block;
+    background-color: green;
+    vertical-align: middle;
+    max-width: 270px;
+}
+.rightajaxzhuangtai{
+    position: relative;
+    top:-30px;
+    left: 300px;
+}
+
+#creation-submit{
+    position: absolute;
+    top: 253px;
+    left: 497px;
+}
+
+.ui-button span,
+.ui-cancel span { font: normal 12px/38px "Lucida Sans Unicode","Lucida Grande",sans-serif;text-transform: uppercase; }
+.ui-button span { padding: 0 0 0 28px; }
+.ui-button span span { background-position: 100% -123px; padding: 0 28px 0 0; }.ui-button,
+.ui-cancel { background: none; border: 0; cursor: pointer; display: inline-block; height: auto; overflow: visible; padding: 0; margin: 0; vertical-align: middle; outline: none; text-align: center; white-space: nowrap; cursor: pointer; }
+.ie .ui-button,
+.ie .ui-cancel { width: auto; }
+.ui-button span,
+.ui-cancel span { outline: none; display: inline-block; background-repeat: no-repeat }
+.ui-button .button-left,
+.ui-button .button-right { overflow:hidden }
+.ie7 .ui-button .button-left,
+.ie7 .ui-button .button-right { overflow:visible }
+.ui-button.disabled,
+.ui-button.disabled:hover,
+.ui-button.disabled.hover { cursor: default; }
+.ui-button.processing,
+.ui-button.processing:hover,
+.ui-button.processing.hover { cursor: progress; }
+.ui-button-large span p strong,
+.total-due strong,
+.recharge-success h3,
+#page-content .summary,
+.queue-details strong { font-size: 18px }
+.ui-button.disabled span span,
+.ui-button.disabled:hover span span,
+.ui-button.disabled.hover span span,
+.button1[disabled] { cursor: not-allowed; }
+.button1.processing,
+.button1.processing:hover,
+.button1.processing.hover { cursor: progress; }
+.ui-cancel span { font: normal 12px/38px "Lucida Sans Unicode","Lucida Grande",sans-serif;text-transform: uppercase; }
+.ui-cancel span { border-left: 1px solid #bbb; padding: 0 1em; margin-left: 10px; }.ui-cancel { background: none; border: 0; cursor: pointer; display: inline-block; height: auto; overflow: visible; padding: 0; margin: 0; vertical-align: middle; outline: none; text-align: center; white-space: nowrap; cursor: pointer; }
+.ie .ui-button,
+.ie .ui-cancel { width: auto; }
+.ui-cancel span { outline: none; display: inline-block; background-repeat: no-repeat }
+.input-note-content .ui-cancel span { border-color: #999; }
+.button1 {
+padding: 2px 4px;
+}
+
+.button1 { padding: 2px 4px; }
+.button1 span { color: #fff; height: 32px; line-height: 32px; background: url("/resources/img/default.gif") 50% 0 repeat-x; }
+.button1 > span { -moz-box-shadow: #444 0 0 5px; -webkit-box-shadow: #444 0 0 5px; box-shadow: #444 0 0 5px; }
+.button1 span { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+.button1.disabled span,
+.button1.processing span,
+.button1[disabled] span { -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+.button1.hover span,
+.button1:hover span,
+.button1:focus span { background-position: 50% -32px; }
+.button1.disabled span,
+.button1.disabled:hover span,
+.button1.disabled.hover span { cursor: default; background: #bdbcb9; }
+.button1.processing span,
+.button1.processing:hover span,
+.button1.processing.hover span { cursor: default; background-position: 50% -64px; color: transparent; }
+.ui-cancel span { border-left: 1px solid #bbb; padding: 0 1em; margin-left: 10px; }
+.button1.disabled,
+.button1.disabled span,
+.button1.disabled:hover,
+.button1.disabled:hover span,
+.button1.disabled.hover,
+.button1.disabled.hover span,
+
+.ui-button, .ui-cancel {
+background: none;
+border: 0;
+cursor: pointer;
+display: inline-block;
+height: auto;
+overflow: visible;
+padding: 0;
+margin: 0;
+vertical-align: middle;
+outline: none;
+text-align: center;
+white-space: nowrap;
+cursor: pointer;
+}
+
+
+.copydatamode{
+    position: absolute;
+    top: 230px;
+    left: 500px;
+}
+.baoguanhaomima{
+position: absolute;
+font-size: 12px;
+margin: 0 0 15px 0;
+padding: 0;
+font-weight: normal;
+letter-spacing: -1px;
+top: 305px;
+left: 195px;
+width:300px;
+}
+#games-list .action { display: inline-block; text-align: right; padding-left: 16px; float: right; }
+#games-list .add-trial { line-height: 48px; color: #4d9400; font-weight: bold; font-size: 12px; background: url("/resources/img/account-icons.gif") no-repeat 0 -341px; }
+#games-list .new-trial .add-trial { background: url('/resources/img/add-game-button.png') repeat-x scroll 0 0 #4A8102; height: 25px; width: auto; margin-top: 10px; color: #fff; line-height: 28px; text-align: center; padding: 0 12px; -moz-box-shadow: 0 0 5px #888; font-size: 12px; font-weight: bold }
+#games-list .add-trial:hover { color: #65b300; }
+#games-list .new-trial .add-trial:hover { color:#fff; background-position: bottom 0 }
+
+#refreshcode{
+    position: absolute;
+    top: 310px;
+    left: 497px;
+}
+
+#lobby-games {
+    margin-bottom: 3em;
+    padding-left: 16px;
+    padding-top: 30px;
+    width: auto;
+    float: right;
+}
+#mianbiantai{
+    float: left;
+}
+
+#layout-middle {
+min-height: 400px;
+}
+#games-list {
+    float: left;
+    width: 333px;
+}
+
+#games-list .games-title { margin-top: 6px; color: #b0afac; display: block; height: 22px; line-height: 22px; padding: 0 0 0 30px; color: #b0afac; text-transform: uppercase; overflow: hidden; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
+#games-list .games-title.opened { background: #6a6e73 url("/resources/img/game-titlebar.png") left 0 no-repeat; }
+#games-list .games-title.closed { background: #797e84 url("/resources/img/game-titlebar.png") left -22px no-repeat; }
+#games-list .games-title.opened:hover,
+#games-list .games-title.opened:focus { color: #fff; background: #6a6e73 url("/resources/img/game-titlebar.png") left -44px no-repeat; }
+#games-list .games-title.closed:hover,
+#games-list .games-title.closed:focus { color: #fff; background: #797e84 url("/resources/img/game-titlebar.png") left -66px no-repeat; }
+
+
+#games-list .game-icon { float: left; width: 32px; height: 32px; margin-right: 10px; top: 8px; position: relative; z-index: 2; }
+#games-list .game-icon .flag { display: block; width: 18px; height: 18px; overflow: hidden; position: absolute; top: 21px; left: 21px; background: url("/resources/img/trial-upgrade.png") no-repeat 0 0; }
+#games-list .game-icon .flag.upgrade { background-position: 0 -18px; }
+#games-list .game-icon .flag.chargeback { background-position: 0 -36px; }
+
+#games-list .account-info { display: inline-block; float: left; width: 310px; }
+
+#games-list .account-link { font-size: 12px; }
+#games-list .account-link a { font-weight: bold; }
+#games-list .account-link strong { color: #0072a3; }
+
+#games-list .account-id { display: block; color: #000; }
+#games-list .account-region {
+    display: block;
+    color: rgb(141, 141, 141);
+}
+.border-4 { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+.border-2 { -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; }
+
+#games-list li.disabled { opacity: .4; }
+#games-list li.unloaded { cursor: pointer; }
+#games-list li.loading { cursor: default; background-image: url("/resources/img/waiting24.gif"); background-position: 368px center; }
+#games-list li.unavailable { cursor: default; background-image: url("/resources/img/unavailable.png"); background-position: 368px center; }
+#games-list li.pending { cursor: default; }
+#games-list li.pending .account-link strong { color: #343434; }
+#games-list li.trial { background-color: #e0dfdd; background-color: rgba(255,255,255,.3); }
+#games-list li.trial .account-link,
+#games-list li.trial .account-id,
+#games-list li.trial em,
+#games-list li.trial .game-icon { opacity: .4; }
+#games-list li.new-trial .game-icon,
+#games-list li.new-trial .account-link { opacity: 1 }
+#games-list li .max-gametitle { display: block; float: left; width: 310px; color: #4D9400; }
+
+#games-list li { margin-top: 6px; cursor: pointer; padding: 6px 40px 6px 6px; height: 48px; line-height: 16px; font-size: 11px; background: #ededeb; color: #343434; overflow: hidden; clear: both; }
+#games-list li.classic { line-height: 48px; }
+#games-list li { background: #ededeb url("/resources/img/game-arrow.png") no-repeat 315px center; }
+#games-list li.account-hover,
+#games-list li:hover { background-color: #f4f4f4; }
+#games-list li.account-hover a,
+#games-list li:hover a { color: #014663; }
+#games-list li.info:hover a,
+#games-list li.cta:hover a { color: #0072a3; }
+#games-list li.info:hover a:hover,
+#games-list li.cta:hover a:hover,
+#games-list li.info:hover a:focus,
+#games-list li.cta:hover a:focus { color: #014663; }
+#games-list li.trial,
+#games-list li.info,
+#games-list li.cta { background-image: none; padding-right: 14px; }
+#games-list li.info { padding-left: 14px; font-style: italic; cursor: inherit; }
+#games-list li.cta { padding: 14px; cursor: inherit; height: auto; font-size: 14px; font-weight: bold; }
+#games-list li.no-games { font-weight: normal; font-size: 11px; }
+#games-list li.cta a { font-size: 14px; font-weight: bold; }
+#games-list li.purchase-promotion,
+#games-list li.upgrade-promotion,
+#games-list li.promotion-target { border: 1px solid #4d9400; padding: 5px 39px 5px 5px; background-color: #fafafa; }
+#games-list li.purchase-promotion:hover,
+#games-list li.upgrade-promotion:hover,
+#games-list li.promotion-target:hover { border-color: #6cc801; background-color: #fff; }
+#games-list .account-info { display: inline-block; float: left; width: 210px; }
+#games-list .promo-info { display: inline-block; float: left; width: 310px; font-size: 14px; padding-top: 8px; font-weight: bold; }
+#games-list li.new-trial { background:url('/resources/img/trial-background.gif') repeat-x scroll 0 0 #4A8102; border:1px solid #627742; -moz-box-shadow:0 0 7px #c3d9a3; display:none; }
+#games-list li.trial .account-info { width: 200px; }
+#games-list li.pending .account-info { width: 330px; }
+#games-list li.cta .account-info { width: 330px; }
+#games-list .account-link { font-size: 12px; }
+#games-list .account-link a { font-weight: bold; }
+#games-list .account-link strong { color: #0072a3; }
+#games-list li:hover .account-link strong { color: #014663; }
+#games-list li.trial .account-link,
+#games-list li.purchase-promotion .account-link,
+#games-list li.double-line .account-link,
+#games-list li.upgrade-promotion .account-link { display: inline-block; float: left; padding-top: 8px; }

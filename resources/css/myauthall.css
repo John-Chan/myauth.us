@@ -1,0 +1,242 @@
+/* 
+    Document   : myauthall
+    Created on : 2013-6-16, 15:49:54
+    Author     : Ann
+    Description:
+        Purpose of the stylesheet follows.
+*/
+#layout-top {
+background: url("/resources/img/bg-sides.png") bottom center repeat-x;
+}
+#layout-middle {
+    background: #d3d1ce  url("/resources/img/bg-middle.jpg")  top center repeat-x;
+    border-bottom: 4px solid rgb(119, 118, 116);}
+#page-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(175, 173, 172);
+}#page-header .privacy-message {
+    margin: 0px;
+}#page-header h2 {
+    margin-top: 0px;
+}.subcategory {
+    color: rgb(93, 93, 93);
+    text-transform: uppercase;
+font: normal 12px/14px 微软雅黑,Microsoft YaHei,Helvetica,Tahoma,StSun,宋体,SimSun,sans-serif;
+}
+
+.headline {
+    font-size: 26px;
+    color: #393939;
+    font: 22px/35px 微软雅黑,Microsoft YaHei,Helvetica,Tahoma,StSun,宋体,SimSun,sans-serif;
+}#page-header .privacy-message {
+    margin: 0px;
+}
+.page-content{
+    position: relative;
+    top: -20px;
+}
+.page-content p { 
+    margin: 0 0 0px 0; line-height: 1.5; }
+
+#order-history { width: 100%; border-collapse: collapse; }
+#order-history-notover { width: 100%; border-collapse: collapse; }
+#order-history th,#order-history-notover th {  text-transform: uppercase; padding: 10px; font-weight: normal; background: url("/resources/img/shadow-small-top.gif") 0 100% repeat-x; }
+#order-history td {  border-top: 1px solid #c1bfbc;}
+#order-history tr.non-pointer td { cursor: default; }
+#order-history-notover td { padding: 10px; border-top: 1px solid #c1bfbc; }
+#order-history .alt-row td,#order-history-notover { background: #d6d4d1; }
+#order-history .child-row td, #order-history-notover .child-row td { border: none; }
+#order-history .parent-row:hover td,
+#order-history .row-hover td { background: #e1e0de; }
+#order-history .row-hover.chargeback td,
+#order-history .chargeback:hover td { background: #c5b3b1; }
+
+#order-history .chargeback td { color: #944a4a; }
+#order-history .empty-history, #order-history-notover .empty-history { padding: 50px; text-align: center; font-size: 18px; font-weight: bold; }
+#order-history th{
+    color: rgb(0, 114, 163);
+}
+.data-container table {
+    width: 100%;
+}table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}thead {
+display: table-header-group;
+vertical-align: middle;
+border-color: inherit;
+}th[Attributes Style] {
+text-align: -webkit-left;
+}th {
+font-weight: bold;
+}td, th {
+display: table-cell;
+vertical-align: inherit;
+}
+tr {
+display: table-row;
+vertical-align: inherit;
+border-color: inherit;
+}
+.sort-link, .sort-tab {
+    display: block;
+}a {
+    color: rgb(0, 114, 163);
+    outline: medium none;
+    text-decoration: none;
+}a:-webkit-any-link {
+text-decoration: none;
+cursor: auto;
+}.sort-link .arrow.down {
+background-position: 0 -43px;
+}.sort-link .arrow {
+padding-left: 10px;
+background: url("/resources/img/table-sort-arrows.png") 0 -8px no-repeat;
+}
+.align-right {
+text-align: right;
+padding: 0px;
+}.align-center {
+text-align: center;
+padding: 0px;
+max-width: 75px;
+}
+.tdimgauth{
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 2px;
+    margin:100 0 0 0;
+    margin-left: -12px;
+    padding: 0 0 0 0;
+}
+.sort-link .arrow.up { background-position: 0 -78px }
+
+
+.ui-button span,
+.ui-cancel span { font: normal 12px/38px  微软雅黑, Microsoft YaHei, Helvetica, Tahoma, StSun, 宋体, SimSun, sans-serif;text-transform: uppercase; }
+.ui-button span { padding: 0 0 0 28px; }
+.ui-button span span { background-position: 100% -123px; padding: 0 28px 0 0; }.ui-button,
+.ui-cancel { background: none; border: 0; cursor: pointer; display: inline-block; height: auto; overflow: visible; padding: 0; margin: 0; vertical-align: middle; outline: none; text-align: center; white-space: nowrap; cursor: pointer; }
+.ie .ui-button,
+.ie .ui-cancel { width: auto; }
+.ui-button span,
+.ui-cancel span { outline: none; display: inline-block; background-repeat: no-repeat }
+.ui-button .button-left,
+.ui-button .button-right { overflow:hidden }
+.ie7 .ui-button .button-left,
+.ie7 .ui-button .button-right { overflow:visible }
+.ui-button.disabled,
+.ui-button.disabled:hover,
+.ui-button.disabled.hover { cursor: default; }
+.ui-button.processing,
+.ui-button.processing:hover,
+.ui-button.processing.hover { cursor: progress; }
+.ui-button-large span p strong,
+.total-due strong,
+.recharge-success h3,
+#page-content .summary,
+.queue-details strong { font-size: 18px }
+.ui-button.disabled span span,
+.ui-button.disabled:hover span span,
+.ui-button.disabled.hover span span,
+.button1[disabled] { cursor: not-allowed; }
+.button1.processing,
+.button1.processing:hover,
+.button1.processing.hover { cursor: progress; }
+.ui-cancel span { font: normal 12px/38px  微软雅黑, Microsoft YaHei, Helvetica, Tahoma, StSun, 宋体, SimSun, sans-serif;text-transform: uppercase; }
+.ui-cancel span { border-left: 1px solid #bbb; padding: 0 1em; margin-left: 10px; }.ui-cancel { background: none; border: 0; cursor: pointer; display: inline-block; height: auto; overflow: visible; padding: 0; margin: 0; vertical-align: middle; outline: none; text-align: center; white-space: nowrap; cursor: pointer; }
+.ie .ui-button,
+.ie .ui-cancel { width: auto; }
+.ui-cancel span { outline: none; display: inline-block; background-repeat: no-repeat }
+.input-note-content .ui-cancel span { border-color: #999; }
+.button1 {
+padding: 2px 4px;
+}
+
+.button1 { padding: 2px 4px; }
+.button1 span { color: #fff; height: 32px; line-height: 32px; background: url("/resources/img/default.gif") 50% 0 repeat-x; }
+.button1 > span { -moz-box-shadow: #444 0 0 5px; -webkit-box-shadow: #444 0 0 5px; box-shadow: #444 0 0 5px; }
+.button1 span { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+.button1.disabled span,
+.button1.processing span,
+.button1[disabled] span { -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+.button1.hover span,
+.button1:hover span,
+.button1:focus span { background-position: 50% -32px; }
+.button1.disabled span,
+.button1.disabled:hover span,
+.button1.disabled.hover span { cursor: default; background: #bdbcb9; }
+.button1.processing span,
+.button1.processing:hover span,
+.button1.processing.hover span { cursor: default; background-position: 50% -64px; color: transparent; }
+.ui-cancel span { border-left: 1px solid #bbb; padding: 0 1em; margin-left: 10px; }
+.button1.disabled,
+.button1.disabled span,
+.button1.disabled:hover,
+.button1.disabled:hover span,
+.button1.disabled.hover,
+.button1.disabled.hover span,
+
+.ui-button, .ui-cancel {
+background: none;
+border: 0;
+cursor: pointer;
+display: inline-block;
+height: auto;
+overflow: visible;
+padding: 0;
+margin: 0;
+vertical-align: middle;
+outline: none;
+text-align: center;
+white-space: nowrap;
+cursor: pointer;
+}
+
+.youshangfangtianjia{
+    float: right;position:relative; top:-36px;
+}
+
+
+.normaltd{cursor: pointer; }
+.authbianhao{
+    padding: 10px;
+    width: 60px;
+}
+.authmincheng{
+    padding: 10px;
+    width: 130px;
+}
+.button-left{
+        font-family: 微软雅黑, Microsoft YaHei, Helvetica, Tahoma, StSun, 宋体, SimSun, sans-serif;
+}
+.authxuliehao{
+    padding: 10px;
+    width: 110px;
+}
+.authhuanyuanma{
+    padding:10px; 
+    width: 70px;
+}
+.authshangcitongbushijian{
+    padding-left:10px; 
+    width: 180px;
+}
+#xiugaiminzitxtinput{
+    width: 120px;
+    padding: 2px;
+    font-size: 14px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 4px 4px 4px 4px;
+}
+.morenauthleftpic{
+    position: relative;
+    top: 2px;
+    margin-left:-12px;
+    padding: 0px;
+}
+.authida{
+    position: relative;
+    top: -1px;
+}

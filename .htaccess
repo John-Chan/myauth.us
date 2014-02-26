@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+ErrorDocument 400 /error.html 
+ErrorDocument 401 /error.html 
+ErrorDocument 403 /error.html 
+ErrorDocument 404 /error.html 
+ErrorDocument 405 /error.html 
+ErrorDocument 408 /error.html 
+ErrorDocument 411 /error.html 
+ErrorDocument 412 /error.html 
+ErrorDocument 413 /error.html 
+ErrorDocument 414 /error.html 
+ErrorDocument 415 /error.html 
+ErrorDocument 500 /error.html
+ErrorDocument 502 /error.html
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)   
+RewriteRule (.*) http://%1/$1 [R=301,L]  
+</IfModule>

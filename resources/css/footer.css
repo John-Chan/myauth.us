@@ -1,0 +1,44 @@
+/* 
+    Document   : footer 普通页面版
+    Created on : 2013-6-11, 20:30:55
+    Author     : Ann
+    Description:
+        Purpose of the stylesheet follows.
+*/
+ol, ul {
+    list-style: none outside none;
+}#homewrapper,#homewrapperbotton{
+    width: 990px;
+    margin: 0 auto;
+}
+#layout-bottom { 
+background: #040404 url("/resources/img/bnbg.jpg")  no-repeat 50% 70%;
+min-height: 1px;
+-moz-user-select: none;
+-webkit-user-select: none;
+}
+img { -moz-user-select: none; -webkit-user-select: none; }
+#homewrapper,#homewrapperbotton{
+    width: 990px;
+    margin: 0 auto;
+}
+#footer { padding: 25px 0;  text-decoration: none;}
+#footer a { color: #697489; }
+#footer a:hover { color: #dcdcdc; }
+#footer h3,
+#footer h3 a { font-weight: normal; font-size: 13px; color: #b2bac7; text-transform: uppercase; }
+#footer-promotions { float: right; width: 302px; padding-bottom: 20px; }
+#footer-promotions a { color: #b2bac7; }
+#sitemap h3 {border-bottom: 2px solid #414a56; padding-bottom: 10px; margin-bottom: 10px; padding-left: 20px; background: url("/resources/img/footer.png") no-repeat; }
+#sitemap h3.auths { background-position: 0 0 }
+#sitemap h3.pages { background-position: 2px -50px }
+#sitemap h3.classic { background-position: 0 -100px }
+#sitemap h3.account { background-position: 2px -150px; padding-left: 23px; }
+#sitemap h3.setting { background-position: 0 -200px; padding-left: 23px; }
+#sitemap .column {float: left; width: 25%; padding-bottom: 20px }
+#sitemap .column ul a { display: block; margin: 2px 0; }
+#sitemap.promotions .column { width: 170px; }
+#copyright {width: 100%; border-top: 1px solid #414a56; color: #2a2c2f;text-align: right;  font-size: 12px; clear: both; padding: 10px 0;  }
+#copyright a { margin-left: 15px; color: #b2bac7; }
+#copyright .legal-links { display: block;}
+#copyright .legal-links a { margin: 0 8px 0 0 }
