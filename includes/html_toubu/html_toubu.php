@@ -18,7 +18,3 @@ defined("ZHANGXUAN") or die("no hacker.");
     </head>
 
     <body>
-        <script type="text/javascript">
-            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0abf57ffe072b473a0418ad8c368f7d2' type='text/javascript'%3E%3C/script%3E"));
-        </script>
