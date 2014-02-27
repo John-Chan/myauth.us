@@ -5,7 +5,7 @@ defined("ZHANGXUAN") or die("no hacker.");
 <html>
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>战网安全令-在线版-Beta测试版-注册</title>
+        <title>战网安全令在线版-注册</title>
         <link rel="stylesheet" href="resources/css/articles.css" type="text/css" />
         <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.ico"> 
         <link rel="stylesheet" href="resources/css/header.css" type="text/css" />
@@ -37,5 +37,15 @@ defined("ZHANGXUAN") or die("no hacker.");
             });
             //]]>
         </script>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?0abf57ffe072b473a0418ad8c368f7d2";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+
     </head>
     <body>

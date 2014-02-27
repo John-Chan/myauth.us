@@ -5,7 +5,7 @@ defined("ZHANGXUAN") or die("no hacker.");
 <html>
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>战网安全令-在线测试版-<?php
+        <title>战网安全令在线版-<?php
 if ($logoutorlogin)
     echo "登出";
 else
@@ -16,5 +16,15 @@ else
         <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.ico"> 
         <script type="text/javascript" src="resources/js/jquery-1.7.1.min.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.ico"> 
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?0abf57ffe072b473a0418ad8c368f7d2";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+
     </head>
     <body>
