@@ -21,6 +21,9 @@ define('DB_PASSWORD', '12345678');
 /** MySQL 主机 */
 define('DB_HOST', 'localhost');
 
+//过期COOKIE清除SQL指令:
+//DELETE FROM `cookiedata` WHERE unix_timestamp(`login_time`) < unix_timestamp('2014-02-27 20:01:43')
+
 /** 每个用户最多的安全令数量  * */
 define('MOST_AUTH', 10);
 

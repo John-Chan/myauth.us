@@ -39,7 +39,7 @@ if ($logincheck == 0) {
                         if (mysqli_num_rows($result) == 0) {
                             $auth_moren = 1;
                         }
-                        $sql = "INSERT INTO `authdata`(`user_id`, `auth_moren`, `auth_name`, `serial`, `region`, `secret`, `sync`, `last_sync`, `restore_code`, `auth_img`) VALUES ($user_id','$auth_moren','$authname','$authserial','$region','$authserect','$authsynctime','$authlastsync','$authrestorecode','$selectpic')";
+                        $sql = "INSERT INTO `authdata`(`user_id`, `auth_moren`, `auth_name`, `serial`, `region`, `secret`, `sync`, `last_sync`, `restore_code`, `auth_img`) VALUES ('$user_id','$auth_moren','$authname','$authserial','$region','$authserect','$authsynctime','$authlastsync','$authrestorecode','$selectpic')";
                         @mysqli_query($dbconnect, $sql);
                         if (is_null($authserial))
                             $authaddbykeyerrorid = 5;

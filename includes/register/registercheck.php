@@ -27,7 +27,7 @@ if (isset($_POST["letters_code"]) && !empty($_POST["letters_code"]) && md5(strto
             $cookievalue = randstr();
             if (checkpostusername($user)) {                                           //验证用户名不重复
                 if (valid_email($emailadd)) {                                         //验证邮箱地址合法
-                    $sql = "INSERT INTO `users`(`user_name`, `user_pass`, `user_email`, `user_email_checked`, `user_registered`, `user_cookie`, `user_question`, `user_answer`, `user_email_checkid`,`user_email_find_code`,`user_email_find_mode`,`user_psd_reset_token`,`user_psd_reset_token_used`) VALUES ('$user','$password','$emailadd',0,'$date','$cookievalue',$question1,'$answer1','$user_email_checkid','$emailfind',0,'$mailresettoken','1')";
+                    $sql = "INSERT INTO `users`(`user_name`, `user_pass`, `user_email`, `user_email_checked`, `user_registered`, `user_question`, `user_answer`, `user_email_checkid`,`user_email_find_code`,`user_email_find_mode`,`user_psd_reset_token`,`user_psd_reset_token_used`) VALUES ('$user','$password','$emailadd',0,'$date',$question1,'$answer1','$user_email_checkid','$emailfind',0,'$mailresettoken','1')";
                     $result = mysqli_query($dbconnect,$sql);
                     if ($result) {
                         $_SESSION['loginuser'] = $user;
@@ -41,6 +41,9 @@ if (isset($_POST["letters_code"]) && !empty($_POST["letters_code"]) && md5(strto
                     $rowtemp = mysqli_fetch_array($result);
                     $user_id = $rowtemp['user_id'];
                     
+                    $sql = "INSERT INTO `cookiedata`(`user_id`, `user_name`, `user_cookie`, `login_time`) VALUES ('$user_id','$user','$cookievalue','$date')";
+                    @mysqli_query($dbconnect,$sql);
+            
                     /*                     * *********发送邮件部分*********** *///发送邮件的某个函数自己后面再处理下吧，格式如下，../mailcheck.php?userid=num&checkcode=dsaswewasdwewqs,查库的确认格式即可
                     $mailtxtcheckurl = SITEHOST . "mailcheck.php?userid=$user_id&checkcode=$user_email_checkid";
                     $mailtxt = "本邮件为系统自动发送，您的战网在线安全令账号已经创建<br><br>" .
@@ -159,7 +162,7 @@ function valid_email($email) {
 }
 
 //随机邮件验证码
-function randstr($len = 6) {
+function randstr($len = 40) {
     $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 // characters to build the password from
     mt_srand((double) microtime() * 1000000 * getmypid());

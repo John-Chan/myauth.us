@@ -1,4 +1,5 @@
 <?php
+
 defined("ZHANGXUAN") or die("no hacker.");
 session_start();
 $logincheck = 0;
@@ -14,7 +15,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && !isset($_POST['let
     $user = mysqli_real_escape_string($dbconnect, htmlspecialchars($_POST['username'], ENT_QUOTES));
     $password = mysqli_real_escape_string($dbconnect, md5($_POST['password']));
     $sql = "SELECT * FROM `users` WHERE `user_name`='$user' AND `user_pass`='$password'";
-    $result = mysqli_query($dbconnect,$sql);
+    $result = mysqli_query($dbconnect, $sql);
     if (mysqli_num_rows($result) == 0) {
         $logincheck = 0;
         $loginerrorid = 1;
@@ -23,8 +24,13 @@ if (isset($_POST['username']) && isset($_POST['password']) && !isset($_POST['let
         $_SESSION['loginuser'] = $user;
         if (isset($_POST['persistLogin']) && $_POST['persistLogin'] == "on") {
             $cookievalue = randstr();
-            $sql = "UPDATE `users` SET `user_cookie`='$cookievalue' WHERE `user_name` = '$user' AND `user_pass` =  '$password'";
-            mysqli_query( $dbconnect,$sql);
+            $sql = "SELECT `user_id` FROM `users` WHERE `user_name`='$user'";
+            $result = mysqli_query($dbconnect, $sql);
+            $rowtemp = mysqli_fetch_array($result);
+            $user_id = $rowtemp['user_id'];
+            $login_time = date('Y-m-d H:i:s');
+            $sql = "INSERT INTO `cookiedata`(`user_id`, `user_name`, `user_cookie`, `login_time`) VALUES ('$user_id','$user','$cookievalue','$login_time')";
+            @mysqli_query($dbconnect, $sql);
             setcookie("loginname", $user, time() + 30 * 24 * 60 * 60, "/");
             setcookie("loginid", $cookievalue, time() + 30 * 24 * 60 * 60, "/");
         }
@@ -34,12 +40,22 @@ if (isset($_POST['username']) && isset($_POST['password']) && !isset($_POST['let
     $logincheck = 1;
 } elseif ($_COOKIE['loginname'] != "" && $_COOKIE['loginid'] != "") {
     $user = mysqli_real_escape_string($dbconnect, htmlspecialchars($_COOKIE['loginname'], ENT_QUOTES));
-    $cookievalue = mysqli_real_escape_string($dbconnect, $_COOKIE['loginid']);
-    $sql = "SELECT * FROM `users` WHERE `user_name`='$user' AND `user_cookie` ='" . $cookievalue . "'";
-    $result = mysqli_query($dbconnect,$sql);
+    $cookievalue = mysqli_real_escape_string($dbconnect, htmlspecialchars($_COOKIE['loginid'], ENT_QUOTES));
+    $sql = "SELECT * FROM `cookiedata` WHERE `user_name`='$user' AND `user_cookie` ='$cookievalue'";
+    $result = mysqli_query($dbconnect, $sql);
     if (mysqli_num_rows($result) > 0) {
-        $_SESSION['loginuser'] = $_COOKIE['loginname'];
-        $logincheck = 1;
+        $rowtemp = mysqli_fetch_array($result);
+        $timedifference = time() - strtotime($rowtemp['login_time']);
+        if ($timedifference <= 30 * 24 * 60 * 60) {
+            $_SESSION['loginuser'] = $_COOKIE['loginname'];
+            $logincheck = 1;
+        } else {
+            $sql = "DELETE FROM `cookiedata` WHERE `user_name`='$user' AND `user_cookie` ='$cookievalue'";
+            @mysqli_query($dbconnect, $sql);
+            setcookie("loginname", "", time() - 3600, "/");
+            setcookie("loginid", "", time() - 3600, "/");
+            $logincheck = 0;
+        }
     } else {
         setcookie("loginname", "", time() - 3600, "/");
         setcookie("loginid", "", time() - 3600, "/");
@@ -48,7 +64,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && !isset($_POST['let
 }
 
 //随机邮件验证码
-function randstr($len = 6) {
+function randstr($len = 40) {
     $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 // characters to build the password from
     mt_srand((double) microtime() * 1000000 * getmypid());

@@ -76,7 +76,7 @@ if (isset($_POST["letters_code"]) && !empty($_POST["letters_code"]) && md5(strto
 }
 
 //随机邮件验证码
-function randstr($len = 6) {
+function randstr($len = 40) {
     $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 // characters to build the password from
     mt_srand((double) microtime() * 1000000 * getmypid());

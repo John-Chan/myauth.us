@@ -20,13 +20,24 @@ defined("ZHANGXUAN") or die("no hacker.");
                         echo "欢迎, <a href=" . SITEHOST . "account.php>" . strtoupper($user) . "</a></li><li class='top-core top-data'><a href='" . SITEHOST . "myauthall.php'>我的安全令</a></li><li class='top-core top-data'><a  onclick=\"if(confirm('若你的账号在其他电脑登录过本站,亦会一并登出,你确认要登出吗'))return true;else return false;\" href='" . SITEHOST . "logout.php'>登出</a></li><li class='top-core top-data'><a href='" . SITEHOST . "faq.php'>FAQ</a></li><li class='top-core top-final'><s>捐赠</s>";
                         $logincheck = 1;
                     } else if (isset($_COOKIE['loginname']) && isset($_COOKIE['loginid']) && $_COOKIE['loginname'] != "" && $_COOKIE['loginid'] != "") {
-                        $user = mysqli_real_escape_string(htmlspecialchars($dbconnect, $_COOKIE['loginname']));
-                        $sql = "SELECT * FROM `users` WHERE `user_name`='$user' AND `user_cookie` ='" . mysqli_real_escape_string($dbconnect,htmlspecialchars($_COOKIE['loginid'])) . "'";
+                        $user = mysqli_real_escape_string($dbconnect, htmlspecialchars($_COOKIE['loginname']));
+                        $cookievalue = mysqli_real_escape_string($dbconnect, htmlspecialchars($_COOKIE['loginid'], ENT_QUOTES));
+                        $sql = "SELECT * FROM `cookiedata` WHERE `user_name`='$user' AND `user_cookie` ='$cookievalue'";
                         $result = mysqli_query($dbconnect, $sql);
                         if (mysqli_num_rows($result) > 0) {
-                            $_SESSION['loginuser'] = $user;
-                            echo "欢迎, <a href=" . SITEHOST . "account.php>" . strtoupper($user) . "</a></li><li class='top-core top-data'><a href='" . SITEHOST . "myauthall.php'>我的安全令</a></li><li class='top-core top-data'><a  onclick=\"if(confirm('若你的账号在其他电脑登录过本站,亦会一并登出,你确认要登出吗'))return true;else return false;\" href='" . SITEHOST . "logout.php'>登出</a></li><li class='top-core top-data'><a href='" . SITEHOST . "faq.php'>FAQ</a></li><li class='top-core top-final'><s>捐赠</s>";
-                            $logincheck = 1;
+                            $rowtemp = mysqli_fetch_array($result);
+                            $timedifference = time() - strtotime($rowtemp['login_time']);
+                            if ($timedifference <= 30 * 24 * 60 * 60) {
+                                $_SESSION['loginuser'] = $user;
+                                echo "欢迎, <a href=" . SITEHOST . "account.php>" . strtoupper($user) . "</a></li><li class='top-core top-data'><a href='" . SITEHOST . "myauthall.php'>我的安全令</a></li><li class='top-core top-data'><a  onclick=\"if(confirm('若你的账号在其他电脑登录过本站,亦会一并登出,你确认要登出吗'))return true;else return false;\" href='" . SITEHOST . "logout.php'>登出</a></li><li class='top-core top-data'><a href='" . SITEHOST . "faq.php'>FAQ</a></li><li class='top-core top-final'><s>捐赠</s>";
+                                $logincheck = 1;
+                            } else {
+                                $sql = "DELETE FROM `cookiedata` WHERE `user_name`='$usertmp' AND `user_cookie` ='$cookievalue'";
+                                @mysqli_query($dbconnect, $sql);
+                                setcookie("loginname", "", time() - 3600, "/");
+                                setcookie("loginid", "", time() - 3600, "/");
+                                echo "<a href='" . SITEHOST . "login.php'>登入</a></li><li class='top-core top-data'><a href='" . SITEHOST . "register.php'>注册</a></li><li class='top-core top-data'><a href='" . SITEHOST . "faq.php'>FAQ</a></li><li class='top-core top-final'><s>捐赠</s>(暂时不需要)";
+                            }
                         } else {
                             setcookie("loginname", "", time() - 3600, "/");
                             setcookie("loginid", "", time() - 3600, "/");
@@ -40,11 +51,11 @@ defined("ZHANGXUAN") or die("no hacker.");
                             if (ctype_digit($_GET['authid'])) {
                                 $auth_id = $_GET['authid'];
                                 $sql = "SELECT * FROM `users` WHERE `user_name`='$user'";
-                                $result = mysqli_query( $dbconnect,$sql);
+                                $result = mysqli_query($dbconnect, $sql);
                                 $rowtemp = mysqli_fetch_array($result);
                                 $user_id = $rowtemp['user_id'];
                                 $sql = "SELECT * FROM `authdata` WHERE `user_id`='$user_id' AND `auth_id`='$auth_id'";
-                                $result = mysqli_query($dbconnect,$sql);
+                                $result = mysqli_query($dbconnect, $sql);
                                 $rowauth = mysqli_fetch_array($result);
                                 if ($rowauth) {//是你的
                                     $autherrid = 0; //没错

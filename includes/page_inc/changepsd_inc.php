@@ -197,7 +197,7 @@ defined("ZHANGXUAN") or die("no hacker.");
                                     --><span class="icon-16-label">密码必须相同。</span><!--
                                     --></li>
                             </ul>
-                            <p class="caption">为了您的安全，我们强烈建议您使用不同于战网、魔兽世界及其它任何线上账号密码的密码。</p>
+                            <p class="caption">为了您的安全，我们强烈建议您使用不同于战网、魔兽世界、暗黑破坏神III、炉石传说及其它任何线上账号密码的密码。</p>
                         </div>
                     </div>
                 </div>
