@@ -27,9 +27,8 @@ if (isset($_POST["letters_code"]) && !empty($_POST["letters_code"]) && md5(strto
                             "<a href='$findurl' target='_blank'>$findurl</a><br><br>" .
                             "如果这不是您操作的，请忽略本邮件，绝对不要点击以上链接。<br><br>" .
                             "本邮件为自动发送，请不要回复，因为没人会看的。<br><br>" .
-                            "战网安全令在线版开发团队<br><br>" .
-                            "MyAuth.Us<br><br>" .
-                            "A.L.P.C";
+                            "竹井诗织里<br><br>".
+							date('Y-m-d');
                     try {
                         $mail = new PHPMailer(true); //创建新的邮件
 

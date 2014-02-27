@@ -22,9 +22,8 @@ if (isset($_POST["letters_code"]) && !empty($_POST["letters_code"]) && md5(strto
                         "您设置是新密码为：" . emailpass($_POST['newPassword']) . " (只显示前三位)<br><br>" .
                         "如果这不是您操作的，请<a href='" . SITEHOST . "' target='_blank'>前往网站</a>重置您的密码。<br><br>" .
                         "本邮件为自动发送，请不要回复，因为没人会看的。<br><br>" .
-                        "战网安全令在线版开发团队<br><br>" .
-                        "MyAuth.Us<br><br>" .
-                        "A.L.P.C<br><br>";
+                        "竹井诗织里<br><br>".
+						date('Y-m-d');
                 try {
                         $mail = new PHPMailer(true); //创建新的邮件
 
