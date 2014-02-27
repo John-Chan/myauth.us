@@ -37,15 +37,6 @@ defined("ZHANGXUAN") or die("no hacker.");
             });
             //]]>
         </script>
-        <script>
-            var _hmt = _hmt || [];
-            (function() {
-                var hm = document.createElement("script");
-                hm.src = "//hm.baidu.com/hm.js?0abf57ffe072b473a0418ad8c368f7d2";
-                var s = document.getElementsByTagName("script")[0]; 
-                s.parentNode.insertBefore(hm, s);
-            })();
-        </script>
 
     </head>
     <body>
